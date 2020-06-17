@@ -7,15 +7,15 @@
 - [【91 算法-基础篇】05.双指针](https://github.com/leetcode-pp/91alg-1/blob/master/basic-05.md)
 ### 打卡记录
 - [【Day1 - 66. 加 1】](https://github.com/wiiinfille/daily-algorithm-punching/blob/master/Day1.md)
-- 【Day2 - 75. 颜色分类】
-- 【Day3 - 1381. 设计一个支持增量操作的栈】]()
+- [【Day2 - 75. 颜色分类】](https://github.com/wiiinfille/daily-algorithm-punching/blob/master/Day2.md)
+- [【Day3 - 1381. 设计一个支持增量操作的栈】](https://github.com/wiiinfille/daily-algorithm-punching/blob/master/Day3.md)
 - 【Day4 - 394. 字符串解码】]()
 - 【Day5 - 232. 用栈实现队列】]()
 - 【Day6 - 380. 常数时间插入、删除和获取随机元素】]()
 - 【Day7 - 206. 反转链表】]()
 - 【进阶篇】安排]()
 - 【Day8 - 430. 扁平化多级双向链表】]()
-- 【Day9 - 109. 有序链表转换二叉搜索树】]()
+- [【Day9 - 109. 有序链表转换二叉搜索树】](https://github.com/wiiinfille/daily-algorithm-punching/blob/master/Day9.md)
 - 【Day10 - 160. 相交链表】]()
 - 【Day11 - 142. 环形链表 II】]()
 - 【Day12 - 160. 相交链表】]()
