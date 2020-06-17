@@ -16,7 +16,7 @@
 - 【进阶篇】安排]()
 - 【Day8 - 430. 扁平化多级双向链表】]()
 - [【Day9 - 109. 有序链表转换二叉搜索树】](https://github.com/wiiinfille/daily-algorithm-punching/blob/master/Day9.md)
-- 【Day10 - 160. 相交链表】]()
+- [【Day10 - 160. 相交链表】](https://github.com/wiiinfille/daily-algorithm-punching/blob/master/Day10.md)
 - 【Day11 - 142. 环形链表 II】]()
 - 【Day12 - 160. 相交链表】]()
 - 【Day13 - 104. 二叉树的最大深度】]()
