@@ -26,47 +26,12 @@ queue.empty(); // 返回 false
 #### 题解
 #### 代码
 ```javascript
-/**循环队列 */
-class MyQueue {
-    constructor() {
-        this.pushArr = [];
-        this.popArr = [];
-    }
-    /**将一个元素放入队列的尾部 */
-    push(value) {
-        this.pushArr.push(value);
-    }
-    /**从队列首部移除元素 */
-    pop() {
-        if(!this.popArr.length){
-            while(this.pushArr.length){
-                this.popArr.push(this.pushArr.pop());
-            }
-        }
-        return this.popArr.pop();
-    }
-    /**返回队列首部的元素 */
-    peek() {
-        if(!this.popArr.length){
-            while(this.pushArr.length){
-                this.popArr.push(this.pushArr.pop());
-            }
-        }
-        return this.popArr[this.popArr.length - 1];
-    }
-    /**返回队列是否为空 */
-    empty() {
-        return !this.pushArr.length && !this.popArr.length;
-    }
-}
-
-
 /**
  * Initialize your data structure here.
  */
 var MyQueue = function() {
-    this.stack1=[];
-    this.stack2=[];
+    this.pushArr = [];
+    this.popArr = [];
 };
 
 /**
@@ -75,7 +40,7 @@ var MyQueue = function() {
  * @return {void}
  */
 MyQueue.prototype.push = function(x) {
-    this.stack1.push(x);
+    this.pushArr.push(x);
 };
 
 /**
@@ -83,14 +48,14 @@ MyQueue.prototype.push = function(x) {
  * @return {number}
  */
 MyQueue.prototype.pop = function() {
-   while(this.stack1.length!==0){
-        this.stack2.push(this.stack1.pop());
-   }
-   var popElement=this.stack2.pop();
-   while(this.stack2.length!==0){
-        this.stack1.push(this.stack2.pop());
-   }
-   return popElement;
+    while(this.pushArr.length !== 0){
+        this.popArr.push(this.pushArr.pop());
+    }
+    var popElement = this.popArr.pop();
+    while(this.popArr.length !== 0){
+        this.pushArr.push(this.popArr.pop());
+    }
+    return popElement;
 };
 
 /**
@@ -98,7 +63,7 @@ MyQueue.prototype.pop = function() {
  * @return {number}
  */
 MyQueue.prototype.peek = function() {
-     return this.stack1[0];
+    return this.pushArr[0];
 };
 
 /**
@@ -106,7 +71,7 @@ MyQueue.prototype.peek = function() {
  * @return {boolean}
  */
 MyQueue.prototype.empty = function() {
-   return !this.stack1.length;
+    return !this.pushArr.length;
 };
 
 /**
@@ -117,5 +82,4 @@ MyQueue.prototype.empty = function() {
  * var param_3 = obj.peek()
  * var param_4 = obj.empty()
  */
-
 ```
