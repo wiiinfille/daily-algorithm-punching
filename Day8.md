@@ -7,8 +7,21 @@
 
 #### 代码
 ```javascript
-var flatten = function (head) {
+/**
+ * // Definition for a Node.
+ * function Node(val,prev,next,child) {
+ *    this.val = val;
+ *    this.prev = prev;
+ *    this.next = next;
+ *    this.child = child;
+ * };
+ */
 
+/**
+ * @param {Node} head
+ * @return {Node}
+ */
+var flatten = function(head) {
     if(!head || !head.next) return head
     let res = head
     while (head) {
@@ -18,14 +31,14 @@ var flatten = function (head) {
             head.child = null
 
             head.next = childHead
-            childHead.pre = head
+            childHead.prev = head
 
             let childEnd = childHead
             while (childEnd && childEnd.next){
                 childEnd = childEnd.next
             }
             childEnd.next = nextHead
-            nextHead.pre = childEnd
+            nextHead.prev = childEnd
             break
         }
         head = head.next
